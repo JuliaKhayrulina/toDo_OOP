@@ -25,10 +25,12 @@ class ToDo {
       this.input.value = '';
       this.todoData.set(newTodo.key, newTodo);
       this.render();
+      this.handler();
     } else {
       alert('Поле должно быть заполнено');
     }
   }
+
   init() {
     this.form.addEventListener('submit', this.addTodo.bind(this));
     this.render();
